@@ -1,0 +1,61 @@
+.image{
+  width:100%;
+  background: url('../images/cell-phone-close-up-contemporary-905873.jpg');
+  background-size: cover;
+  height:90vh;
+ 
+}
+.card{
+  width:75%;
+  text-align: center;
+  margin:30px;
+  opacity:0.9;
+ 
+}
+
+section {
+    padding-top: 60px;
+}
+#footer {
+    background:#737373;
+}
+#footer h5{
+	padding-left: 10px;
+    border-left: 3px solid #eeeeee;
+    padding-bottom: 6px;
+    margin-bottom: 20px;
+    color:#ffffff;
+}
+#footer a {
+    color: #ffffff;
+    text-decoration: none !important;
+    background-color: transparent;
+}
+#footer ul.social li{
+	padding: 3px 0;
+}
+#footer ul.social li a i {
+    margin-right: 5px;
+	font-size:25px;
+	transition: .5s;
+}
+
+#footer ul.social li a,
+#footer ul.quick-links li a{
+	color:#ffffff;
+}
+#footer ul.social li a:hover{
+    color:black;
+}
+#footer ul.quick-links li{
+	padding: 3px 0;
+	transition: .5s ;
+}
+#footer ul.quick-links li:hover{
+	padding: 3px 0;
+	margin-left:10px;
+	font-weight:700;
+}
+
+
+

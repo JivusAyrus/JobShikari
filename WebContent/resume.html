@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Create Resume</title>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <link rel="stylesheet" href="css/resume.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
+</head>
+<body>
+    
+    <nav class="navbar navbar-light bg-light fixed-top" style="border: black 2px solid; padding-left: 80px;padding-right: 20px;margin-left: 20px;margin-right: 10px; margin-top: 10px;">
+        <!-- Navbar content -->
+        
+        <!-- <button type="button" class="btn btn-light" onclick="openNav();" > &#9776;</button> -->
+        <a style="font-size: 25px; color:black;  font-family:'Times New Roman', Times, serif"><strong>JOB SHIKARI - The best job portal of humanity</strong></a>
+       <a href="employeeHomepage.jsp"><button type="button" class="btn btn-outline-dark" > Home</button></a>
+       <form action="JobListServlet" method="GET">
+				 <a
+			><button type="submit"
+				class="btn btn-outline-dark">Jobs</button></a> 
+				</form>
+        <a href="Tutoreals.html"><button type="button" class="btn btn-outline-dark" onclick="">Tutorials</button></a>
+        <a href="#"><button type="button" class="btn btn-secondary" onclick="">Resume</button></a>
+        <a href="employeecontactus.html"><button type="button" class="btn btn-outline-dark" onclick="">Contact Us</button>
+        </a>
+       
+      </nav>
+      <br><br><br><br>
+      <div class="image" style="padding-left:520px;padding-top:50px;">
+            
+                <br>
+               
+                    <div class="card1" style="width: 18rem; border: black solid 1px;">
+                        <div class="card-body">
+                            
+                            <h2><strong><u><center>Resume</center></u></strong></h2>
+                          <!-- <h6 class="card-title"><center>Do You Have a Resume</center></h6>
+                          <form action="/action_page.php">
+                            <input type="file" name="pic" accept="image/*">
+                            <br><br>
+                            <center><button type="submit" class="btn btn-outline-primary">Submit</button></center>
+                          </form> -->
+                          <!-- <button type="button" class="btn btn-outline-primary">Upload</button> -->
+                          <!-- <hr 100%> -->
+                          <center><h4 class="card-title">Dont Have One Yet?</h4>
+                        <h6>Don't worry! Thats why we are here</h6>
+                        <h9>Lets help you make a awesome resume!</h9>
+                        
+                        </center>
+                          <center><form style="">
+  
+  
+  <!-- Modal -->
+<div class="modal fade" id="exampleModalScrollable" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalScrollableTitle">Resumes to the Rescue</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <center><h5>Choose your preference</h5></center>
+          <br><br><br>
+          <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="images/vanilla.png" alt="Card image cap">
+            <div class="card-body">
+              <p class="card-text">Prepare a vintage Resume. After all who doesnt like the classics?.</p>
+              <a href="vanilla.html"> <button type="button" class="btn btn-outline-success">I wanna try this one!</button></a>
+            </div>
+          </div>
+          <br><br><br>
+          <div class="card" style="width: 18rem;">
+              <img class="card-img-top" src="images/rasp.png" alt="Card image cap">
+              <div class="card-body">
+                <p class="card-text">A dash of juicy Purple and a taste of tanginess will leave your eyes hungry for more of such beauty.</p>
+                <a href="raspberry.html"> <button type="button" class="btn btn-outline-success">I wanna try this one!</button></a>
+              </div>
+            </div>
+            <br><br><br>
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="images/fire.png" alt="Card image cap">
+                <div class="card-body">
+                  <p class="card-text">You would not beleive your eyes! But you will beleive in our resume :).</p>
+                  <a href="fireflies.html"> <button type="button" class="btn btn-outline-success">I wanna try this one!</button></a>
+                </div>
+              </div>
+              <br><br><br>
+              <div class="card" style="width: 18rem;">
+                  <img class="card-img-top" src="images/INDIGO.png" alt="Card image cap">
+                  <div class="card-body">
+                    <p class="card-text">The royal Blue that shows the mark of royalty. May your highness love this feast.</p>
+                    <a href="indigo.html"> <button type="button" class="btn btn-outline-success">I wanna try this one!</button></a>
+                  </div>
+                </div>
+                <br><br><br>
+             <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="images/pista.png" alt="Card image cap">
+                    <div class="card-body">
+                      <p class="card-text">Mista! We need da pista ! Itsa good! itsa best! Itsa the one you want from da rest!</p>
+                      <a href="pista.html"> <button type="button" class="btn btn-outline-success">I wanna try this one!</button></a>
+                    </div>
+                  </div>
+                  <br><br><br>
+
+       
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+         
+        </div>
+      </div>
+    </div>
+  </div>
+                        
+                           
+                         <center>                           <!-- Button trigger modal -->
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalScrollable">
+                                Templates
+                              </button></center>
+                        </div>
+                        
+                    </center>
+                
+                  </div>
+                  
+                  
+      </div>
+</body>
+<footer>
+    <section id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <ul class="list-unstyled list-inline social text-center">
+                        <li class="list-inline-item"><a href="..."><i class='fab fa-facebook-square'
+                                    style='font-size:24px'></i></a></li>
+                        <li class="list-inline-item"><a href="..."><i class='fab fa-twitter'
+                                    style='font-size:24px'></i></a></li>
+                        <li class="list-inline-item"><a href="..."><i class='fab fa-github'
+                                    style='font-size:24px'></i></a></li>
+                        <li class="list-inline-item"><a href="..."><i class='fab fa-instagram'
+                                    style='font-size:24px'></i></a></li>
+                                    <li class="list-inline-item"><a href="about_us.html"><i class="fa fa-info-circle" style="font-size:24px"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div>
+                <center>© 2019 Job Shikari - All Rights Reserved</center>
+                <br>
+            </div>
+    
+        </div>
+    </section>
+</footer>
+
+<style>
+.card:hover {opacity: 1;
+background-color:powderblue;
+transform: scale(1.2);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+
+}
+
+
+</style>
+</html>

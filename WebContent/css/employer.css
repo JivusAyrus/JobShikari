@@ -1,0 +1,45 @@
+.image{
+    width:100%;
+    background: url('../images/cell-phone-close-up-contemporary-905873.jpg');
+    background-size: cover;
+    height:100vh;
+   
+  }
+  
+  .card{
+    width:45%;
+    text-align: center;
+    margin-top:70px;
+    margin-left:160px;
+    opacity:0.9;
+    border-radius:10px;
+    border:1px solid black;
+  }
+input{
+    width:90%;
+    border-radius: 0px;
+    border:1px solid black;
+    height:30px;
+    font-family:'Times New Roman', Times, serif;
+    font-style:italic;
+    font-size:20px;
+}
+#footer {
+  background:#737373;
+}
+#footer ul.social li a{
+color:#ffffff;
+}
+#footer ul.social li a:hover{
+  color:black;
+}
+#footer ul.social li{
+  padding-right: 15px;
+  padding-top:15px;
+}
+.about{
+  color:white;
+}
+
+
+

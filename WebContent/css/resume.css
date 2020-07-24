@@ -1,0 +1,22 @@
+#footer {
+    background:#737373;
+  }
+  #footer ul.social li a{
+  color:#ffffff;
+  }
+  #footer ul.social li a:hover{
+    color:black;
+  }
+  #footer ul.social li{
+    padding-right: 15px;
+    padding-top:15px;
+  }
+  .image{ 
+
+       background-image: url("images/apple-clean-containers-205316.jpg");
+       background-size: cover;
+       height: 90vh;
+       /* padding-top: 100px; */
+       /* width: 100vh; */
+  }
+ 

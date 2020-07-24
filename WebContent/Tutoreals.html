@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/about.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<style>
+body {
+  margin: 0;
+  font-family: "Lato", sans-serif;
+}
+
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #f1f1f1;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+.sidebar a {
+  display: block;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+}
+ 
+.sidebar a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.sidebar a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+
+div.content {
+  margin-left: 200px;
+  padding: 1px 16px;
+  height: 1000px;
+}
+
+@media screen and (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .sidebar a {float: left;}
+  div.content {margin-left: 0;}
+}
+
+@media screen and (max-width: 400px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
+}
+
+
+* {box-sizing: border-box}
+body {font-family: "Lato", sans-serif;}
+
+/* Style the tab */
+.tab {
+  float: left;
+  
+  background-color: #f1f1f1;
+width: 100%;
+  
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  display: block;
+  background-color: inherit;
+  
+ 
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  font-size: 60px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color:blue;
+}
+
+/* Create an active/current "tab button" class */
+.tab button.active {
+  background-color:greenyellow;
+}
+
+/* Style the tab content */
+.tabcontent {
+  float: left;
+  padding: 0px 12px;
+  
+  width: 70%;
+  border-left: none;
+  height: 300px;
+  display: none;
+}
+
+/* Clear floats after the tab */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+</style>
+  
+</head>
+<body background="images/nicebg.png">
+        <nav class="navbar navbar-light bg-light sticky-top" style="border: black 2px solid; margin: 10px; ">
+                <!-- Navbar content -->
+                
+                
+                <a style="font-size: 25px; color:black;  font-family:'Times New Roman', Times, serif"><strong>JOB SHIKARI - The best job portal of humanity</strong></a>
+               <a href="employeeHomePage.html"><button type="button" class="btn btn-secondary" > Home</button></a>
+               <a href="jobSearch.html"><button type="button" class="btn btn-secondary" > Jobs</button></a>
+               
+                <a href="#"><button type="button" class="btn btn-dark" onclick="">Tutorials</button></a>
+                <a href="resume.html"><button type="button" class="btn btn-secondary" onclick="">Resume</button></a>
+                <a href="employeecontactus.html"><button type="button" class="btn btn-secondary" onclick="">Contact us</button></a>
+        
+               
+              </nav>
+    <div class="sidebar">
+        <div class="tab">
+            <a class="tablinks" onclick="openCity(event, 'home')">FAQ and How to</button></a>
+            <a class="tablinks" onclick="openCity(event, 'vid')">Videos</button></a>
+            <a class="tablinks" onclick="openCity(event, 'docs')">Free Books</button></a>
+          </div>
+          
+       
+      </div>
+      
+
+
+      <div class="content">
+          
+<div id="home" class="tabcontent" >
+ <center> <h1 style="background-color:white; border:grey solid 2px; font-family: 'Times New Roman', Times, serif">FAQ and How To</h1></center>
+  <button class="accordion">But how Do I do this?</button>
+  <div class="panel">
+    <p>This is how you do it :)</p>
+  </div>
+  <br><br>
+  <button class="accordion">But how Do I do this?</button>
+  <div class="panel">
+    <p>This is how you do it :)</p>
+  </div>
+  <br><br>
+  
+  <button class="accordion">But how Do I do this?</button>
+  <div class="panel">
+    <p>This is how you do it :)</p>
+  </div>
+  <br><br>
+  <button class="accordion">But how Do I do this?</button>
+  <div class="panel">
+    <p>This is how you do it :)</p>
+  </div>
+  <br><br>
+  <button class="accordion">But how Do I do this?</button>
+  <div class="panel">
+    <p>This is how you do it :)</p>
+  </div>
+  <br><br>
+  <button class="accordion">But how Do I do this?</button>
+  <div class="panel">
+    <p>This is how you do it :)</p>
+  </div>
+  <br><br>
+  <button class="accordion">But how Do I do this?</button>
+  <div class="panel">
+    <p>This is how you do it :)</p>
+  </div>
+  <br><br>
+  <button class="accordion">But how Do I do this?</button>
+  <div class="panel">
+    <p>This is how you do it :)</p>
+  </div>
+  <br><br>
+</div>
+<style>
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .accordion:hover {
+  background-color: #ccc;
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  display: none;
+  overflow: hidden;
+}
+</style>
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    /* Toggle between adding and removing the "active" class,
+    to highlight the button that controls the panel */
+    this.classList.toggle("active");
+
+    /* Toggle between hiding and showing the active panel */
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+
+
+</script>
+
+<div id="vid" class="tabcontent" >
+  <center><h1 style="background-color:white; border:grey solid 2px; font-family:'Times New Roman', Times, serif ">Videos</h1></center>
+  <!------------------------------------------------------------------------------------------------------------------------->
+  <center>
+  <h3 style="background-color:white; border:grey solid 2px;">Filters for your Tutorials</h3>
+  <button class="btn btn-dark" id="btn1">Java</button>
+              <button  class="btn btn-dark" id="btn2">JavaScript</button>
+              <button  class="btn btn-dark" id="btn3">React</button>
+              <button  class="btn btn-dark" id="btn4">Web Development</button>
+              <button  class="btn btn-dark" id="btn5">Shell Scripting</button>
+              <br><br>
+              <button class="btn btn-dark" id="btnall">Show all</button>
+            </center>
+<center>
+  <div class="prod1" id="cat1">
+
+        <center><h1 style="background-color: whitesmoke;">JAVA</h1></center>
+        
+            
+                        <div class="pic">
+                    <div class="card mb-3">
+                        <div class="picus">
+                          <center><iframe  src="https://www.youtube.com/embed/8cm1x4bC610" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+                        </div>
+                        <div class="card-body">
+                          <center><h5 class="card-title">Check out this video</h5></center>
+                          <p class="card-text" align="center">All the information about the video is here! So all you gotta do is see it :)</p>
+                          <p class="card-text" align="center"><small class="text-muted">Vidoes Subject to copyrights- Job Shikari 2019</small></p>
+                        </div>
+                      </div>
+                </div>
+            
+            
+            
+              <div class="pic">
+          <div class="card mb-3">
+              <div class="picus">
+                <center><iframe  src="https://www.youtube-nocookie.com/embed/eIrMbAQSU34" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+              </div>
+              <div class="card-body">
+                <center><h5 class="card-title">Check out this video</h5></center>
+                <p class="card-text" align="center">All the information about the video is here! So all you gotta do is see it :)</p>
+                <p class="card-text" align="center"><small class="text-muted">Vidoes Subject to copyrights- Job Shikari 2019</small></p>
+              </div>
+            </div>
+      </div>
+    
+    
+    
+      <div class="pic">
+    <div class="card mb-3">
+      <div class="picus">
+        <center><iframe  src="https://www.youtube-nocookie.com/embed/hBh_CC5y8-s" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+      </div>
+      <div class="card-body">
+        <center><h5 class="card-title">Check out this video</h5></center>
+        <p class="card-text" align="center">All the information about the video is here! So all you gotta do is see it :)</p>
+        <p class="card-text" align="center"><small class="text-muted">Vidoes Subject to copyrights- Job Shikari 2019</small></p>
+      </div>
+    </div>
+    </div>
+    
+    
+  
+      <div class="pic">
+    <div class="card mb-3">
+      <div class="picus">
+        <center><iframe src="https://www.youtube-nocookie.com/embed/grEKMHGYyns" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+      </div>
+      <div class="card-body">
+        <center><h5 class="card-title">Check out this video</h5></center>
+        <p class="card-text" align="center">All the information about the video is here! So all you gotta do is see it :)</p>
+        <p class="card-text" align="center"><small class="text-muted">Vidoes Subject to copyrights- Job Shikari 2019</small></p>
+      </div>
+    </div>
+    </div>
+   
+    
+    
+    
+    
+    </div>
+    
+    
+    
+    <br><br>
+    <br><br>
+        
+        <div class="prod1" id="cat2">
+    
+        <center><h1 style="background-color: whitesmoke;">JavaScript</h1></center>
+        
+            
+                
+                        <div class="pic">
+                    <div class="card mb-3">
+                        <div class="picus">
+                          <center><iframe  src="https://www.youtube-nocookie.com/embed/PkZNo7MFNFg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+                        </div>
+                        <div class="card-body">
+                          <center><h5 class="card-title">Check out this video</h5></center>
+                          <p class="card-text" align="center">All the information about the video is here! So all you gotta do is see it :)</p>
+                          <p class="card-text" align="center"><small class="text-muted">Vidoes Subject to copyrights- Job Shikari 2019</small></p>
+                        </div>
+                      </div>
+                </div>
+            
+            
+            
+              <div class="pic">
+          <div class="card mb-3">
+              <div class="picus">
+                <center><iframe  src="https://www.youtube.com/embed/W6NZfCO5SIk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+              </div>
+              <div class="card-body">
+                <center><h5 class="card-title">Check out this video</h5></center>
+                <p class="card-text" align="center">All the information about the video is here! So all you gotta do is see it :)</p>
+                <p class="card-text" align="center"><small class="text-muted">Vidoes Subject to copyrights- Job Shikari 2019</small></p>
+              </div>
+            </div>
+      </div>
+    
+    
+    
+      <div class="pic">
+    <div class="card mb-3">
+      <div class="picus">
+        <center><iframe  src="https://www.youtube.com/embed/PFmuCDHHpwk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+      </div>
+      <div class="card-body">
+        <center><h5 class="card-title">Check out this video</h5></center>
+        <p class="card-text" align="center">All the information about the video is here! So all you gotta do is see it :)</p>
+        <p class="card-text" align="center"><small class="text-muted">Vidoes Subject to copyrights- Job Shikari 2019</small></p>
+      </div>
+    </div>
+    </div>
+    
+    
+    
+      <div class="pic">
+    <div class="card mb-3">
+      <div class="picus">
+        <center><iframe src="https://www.youtube.com/embed/NhYMlbKgQzU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+      </div>
+      <div class="card-body">
+        <center><h5 class="card-title">Check out this video</h5></center>
+        <p class="card-text" align="center">All the information about the video is here! So all you gotta do is see it :)</p>
+        <p class="card-text" align="center"><small class="text-muted">Vidoes Subject to copyrights- Job Shikari 2019</small></p>
+      </div>
+    </div>
+    </div>
+   
+    
+    </div>
+    
+    
+    
+    
+    <br><br>
+    
+        
+        <div class="prod1" id="cat3">
+    
+        <center><h1 style="background-color: whitesmoke;">React</h1></center>
+        
+            
+                
+                        <div class="pic">
+                    <div class="card mb-3">
+                        <div class="picus">
+                          <center><iframe  src="https://www.youtube.com/embed/MhkGQAoc7bc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+                        </div>
+                        <div class="card-body">
+                          <center><h5 class="card-title">Check out this video</h5></center>
+                          <p class="card-text" align="center">All the information about the video is here! So all you gotta do is see it :)</p>
+                          <p class="card-text" align="center"><small class="text-muted">Vidoes Subject to copyrights- Job Shikari 2019</small></p>
+                        </div>
+                      </div>
+                </div>
+            
+            
+            
+              <div class="pic">
+          <div class="card mb-3">
+              <div class="picus">
+                <center><iframe  src="https://www.youtube.com/embed/sBws8MSXN7A" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+              </div>
+              <div class="card-body">
+                <center><h5 class="card-title">Check out this video</h5></center>
+                <p class="card-text" align="center">All the information about the video is here! So all you gotta do is see it :)</p>
+                <p class="card-text" align="center"><small class="text-muted">Vidoes Subject to copyrights- Job Shikari 2019</small></p>
+              </div>
+            </div>
+      </div>
+    
+    
+    
+      <div class="pic">
+    <div class="card mb-3">
+      <div class="picus">
+        <center><iframe  src="https://www.youtube.com/embed/Ke90Tje7VS0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+      </div>
+      <div class="card-body">
+        <center><h5 class="card-title">Check out this video</h5></center>
+        <p class="card-text" align="center">All the information about the video is here! So all you gotta do is see it :)</p>
+        <p class="card-text" align="center"><small class="text-muted">Vidoes Subject to copyrights- Job Shikari 2019</small></p>
+      </div>
+    </div>
+    </div>
+    
+    
+    
+      <div class="pic">
+    <div class="card mb-3">
+      <div class="picus">
+        <center><iframe src="https://www.youtube.com/embed/DLX62G4lc44" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+      </div>
+      <div class="card-body">
+        <center><h5 class="card-title">Check out this video</h5></center>
+        <p class="card-text" align="center">All the information about the video is here! So all you gotta do is see it :)</p>
+        <p class="card-text" align="center"><small class="text-muted">Vidoes Subject to copyrights- Job Shikari 2019</small></p>
+      </div>
+    </div>
+    </div>
+    
+    
+    
+    </div>
+    
+    
+    
+    <br><br>
+    
+        
+        <div class="prod1" id="cat4">
+    
+        <center><h1 style="background-color: whitesmoke;">Web Development</h1></center>
+        
+            
+               
+                        <div class="pic">
+                    <div class="card mb-3">
+                        <div class="picus">
+                          <center><iframe  src="https://www.youtube.com/embed/U-JhRjRaD4A" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+                        </div>
+                        <div class="card-body">
+                          <center><h5 class="card-title">Check out this video</h5></center>
+                          <p class="card-text" align="center">All the information about the video is here! So all you gotta do is see it :)</p>
+                          <p class="card-text" align="center"><small class="text-muted">Vidoes Subject to copyrights- Job Shikari 2019</small></p>
+                        </div>
+                      </div>
+                </div>
+            
+            
+           
+              <div class="pic">
+          <div class="card mb-3">
+              <div class="picus">
+                <center><iframe  src="https://www.youtube.com/embed/gQojMIhELvM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+              </div>
+              <div class="card-body">
+                <center><h5 class="card-title">Check out this video</h5></center>
+                <p class="card-text" align="center">All the information about the video is here! So all you gotta do is see it :)</p>
+                <p class="card-text" align="center"><small class="text-muted">Vidoes Subject to copyrights- Job Shikari 2019</small></p>
+              </div>
+            </div>
+      </div>
+    
+    
+   
+      <div class="pic">
+    <div class="card mb-3">
+      <div class="picus">
+        <center><iframe  src="https://www.youtube.com/embed/pQN-pnXPaVg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+      </div>
+      <div class="card-body">
+        <center><h5 class="card-title">Check out this video</h5></center>
+        <p class="card-text" align="center">All the information about the video is here! So all you gotta do is see it :)</p>
+        <p class="card-text" align="center"><small class="text-muted">Vidoes Subject to copyrights- Job Shikari 2019</small></p>
+      </div>
+    </div>
+    </div>
+    
+    
+   
+      <div class="pic">
+    <div class="card mb-3">
+      <div class="picus">
+        <center><iframe src="https://www.youtube.com/embed/3JluqTojuME" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+      </div>
+      <div class="card-body">
+        <center><h5 class="card-title">Check out this video</h5></center>
+        <p class="card-text" align="center">All the information about the video is here! So all you gotta do is see it :)</p>
+        <p class="card-text" align="center"><small class="text-muted">Vidoes Subject to copyrights- Job Shikari 2019</small></p>
+      </div>
+    </div>
+    </div>
+    
+    
+    
+    </div>
+    
+    
+    <br><br>
+    
+        
+        <div class="prod1" id="cat5">
+    
+        <center><h1 style="background-color: whitesmoke;">Shell Scripting</h1></center>
+        
+            
+                
+                        <div class="pic">
+                    <div class="card mb-3">
+                        <div class="picus">
+                          <center><iframe  src="https://www.youtube.com/embed/jpi4Nb-tzgk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+                        </div>
+                        <div class="card-body">
+                          <center><h5 class="card-title">Check out this video</h5></center>
+                          <p class="card-text" align="center">All the information about the video is here! So all you gotta do is see it :)</p>
+                          <p class="card-text" align="center"><small class="text-muted">Vidoes Subject to copyrights- Job Shikari 2019</small></p>
+                        </div>
+                      </div>
+                </div>
+           
+            
+           
+              <div class="pic">
+          <div class="card mb-3">
+              <div class="picus">
+                <center><iframe  src="https://www.youtube.com/embed/9qdbEUdkYC0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+              </div>
+              <div class="card-body">
+                <center><h5 class="card-title">Check out this video</h5></center>
+                <p class="card-text" align="center">All the information about the video is here! So all you gotta do is see it :)</p>
+                <p class="card-text" align="center"><small class="text-muted">Vidoes Subject to copyrights- Job Shikari 2019</small></p>
+              </div>
+            </div>
+      </div>
+    
+    
+    
+      <div class="pic">
+    <div class="card mb-3">
+      <div class="picus">
+        <center><iframe  src="https://www.youtube-nocookie.com/embed/hBh_CC5y8-s" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+      </div>
+      <div class="card-body">
+        <center><h5 class="card-title">Check out this video</h5></center>
+        <p class="card-text" align="center">All the information about the video is here! So all you gotta do is see it :)</p>
+        <p class="card-text" align="center"><small class="text-muted">Vidoes Subject to copyrights- Job Shikari 2019</small></p>
+      </div>
+    </div>
+    </div>
+    
+    
+    
+      <div class="pic">
+    <div class="card mb-3">
+      <div class="picus">
+        <center><iframe src="https://www.youtube-nocookie.com/embed/grEKMHGYyns" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+      </div>
+      <div class="card-body">
+        <center><h5 class="card-title">Check out this video</h5></center>
+        <p class="card-text" align="center">All the information about the video is here! So all you gotta do is see it :)</p>
+        <p class="card-text" align="center"><small class="text-muted">Vidoes Subject to copyrights- Job Shikari 2019</small></p>
+      </div>
+    </div>
+    </div>
+    
+                
+                
+                
+        </div>
+
+    </center>
+    
+        
+               
+                        <script>
+                 $(document).ready(function(){
+                          $("#btn1").click(function(){
+                                 $("#cat1").show();
+                                 $("#cat2").hide();
+                                 $("#cat3").hide();
+                                 $("#cat4").hide();
+                                 $("#cat5").hide();
+                                });
+                                $("#btn2").click(function(){
+                                 $("#cat1").hide();
+                                 $("#cat2").show();
+                                 $("#cat3").hide();
+                                 $("#cat4").hide();
+                                 $("#cat5").hide();
+                                });
+                                $("#btn3").click(function(){
+                                 $("#cat1").hide();
+                                 $("#cat2").hide();
+                                 $("#cat3").show();
+                                 $("#cat4").hide();
+                                 $("#cat5").hide();
+                                });
+                                $("#btn4").click(function(){
+                                 $("#cat1").hide();
+                                 $("#cat2").hide();
+                                 $("#cat3").hide();
+                                 $("#cat4").show();
+                                 $("#cat5").hide();
+                                });
+                                $("#btn5").click(function(){
+                                 $("#cat1").hide();
+                                 $("#cat2").hide();
+                                 $("#cat3").hide();
+                                 $("#cat4").hide();
+                                 $("#cat5").show();
+                                });
+                                $("#btnall").click(function(){
+                                 $("#cat1").show();
+                                 $("#cat2").show();
+                                 $("#cat3").show();
+                                 $("#cat4").show();
+                                 $("#cat5").show();
+                                });
+                                
+                        
+                        });
+                        </script>
+    
+    <style>
+        body {
+          font-family: 'Lato', sans-serif;
+        }
+        
+        .overlay {
+          height: 0%;
+          width: 100%;
+          position: fixed;
+          z-index: 1;
+          top: 0;
+          left: 0;
+          background-color: rgb(0,0,0);
+          background-color: rgba(0,0,0, 0.9);
+          overflow-y: hidden;
+          transition: 0.5s;
+        }
+        
+        .overlay-content {
+          position: relative;
+          top: 25%;
+          width: 100%;
+          text-align: center;
+          margin-top: 30px;
+        }
+        
+        .overlay a {
+          padding: 8px;
+          text-decoration: none;
+          font-size: 36px;
+          color: #818181;
+          display: block;
+          transition: 0.3s;
+        }
+        
+        .overlay a:hover, .overlay a:focus {
+          color: #f1f1f1;
+        }
+        
+        .overlay .closebtn {
+          position: absolute;
+          top: 20px;
+          right: 45px;
+          font-size: 60px;
+        }
+        
+        @media screen and (max-height: 450px) {
+          .overlay {overflow-y: auto;}
+          .overlay a {font-size: 20px}
+          .overlay .closebtn {
+          font-size: 40px;
+          top: 15px;
+          right: 35px;
+          }
+        }
+        </style>
+
+
+
+
+
+
+
+
+  <!------------------------------------------------------------------------------------------------------------------------->
+</div>
+
+<div id="docs" class="tabcontent" >
+  <center><h1 style="background-color:white; border:grey solid 2px; font-family: 'Times New Roman', Times, serif">COPYRIGHT FREE- BOOKS</h1></center>
+  <div class="card mb-3">
+        <div class="picus">
+          <center><img src="image/book.png" height="100px; width=200px;"></center>
+        </div>
+        <div class="card-body">
+                <a href="docs/123.pdf" download> <center><h5 class="card-title">Check out this book</h5></center></a>
+          <p class="card-text" align="center">All the information about the book is here! So all you gotta do is download it :)</p>
+          <p class="card-text" align="center"><small class="text-muted">Books Subject to copyrights- Job Shikari 2019</small></p>
+        </div>
+      </div>
+      <div class="card mb-3">
+            <div class="picus">
+              <center><img src="image/book.png" height="100px; width=200px;"></center>
+            </div>
+            <div class="card-body">
+                    <a href="docs/123.pdf" download> <center><h5 class="card-title">Check out this book</h5></center></a>
+              <p class="card-text" align="center">All the information about the book is here! So all you gotta do is download it :)</p>
+              <p class="card-text" align="center"><small class="text-muted">Books Subject to copyrights- Job Shikari 2019</small></p>
+            </div>
+          </div>
+          <div class="card mb-3">
+                <div class="picus">
+                  <center><img src="image/book.png" height="100px; width=200px;"></center>
+                </div>
+                <div class="card-body">
+                        <a href="docs/123.pdf" download> <center><h5 class="card-title">Check out this book</h5></center></a>
+                  <p class="card-text" align="center">All the information about the book is here! So all you gotta do is download it :)</p>
+                  <p class="card-text" align="center"><small class="text-muted">Books Subject to copyrights- Job Shikari 2019</small></p>
+                </div>
+              </div>
+              <div class="card mb-3">
+                    <div class="picus">
+                      <center><img src="image/book.png" height="100px; width=200px;"></center>
+                    </div>
+                    <div class="card-body">
+                            <a href="docs/123.pdf" download> <center><h5 class="card-title">Check out this book</h5></center></a>
+                      <p class="card-text" align="center">All the information about the book is here! So all you gotta do is download it :)</p>
+                      <p class="card-text" align="center"><small class="text-muted">Books Subject to copyrights- Job Shikari 2019</small></p>
+                    </div>
+                  </div>
+                  <div class="card mb-3">
+                        <div class="picus">
+                          <center><img src="image/book.png" height="100px; width=200px;"></center>
+                        </div>
+                        <div class="card-body">
+                                <a href="docs/123.pdf" download> <center><h5 class="card-title">Check out this book</h5></center></a>
+                          <p class="card-text" align="center">All the information about the book is here! So all you gotta do is download it :)</p>
+                          <p class="card-text" align="center"><small class="text-muted">Books Subject to copyrights- Job Shikari 2019</small></p>
+                        </div>
+                      </div>
+</div>
+
+<div class="clearfix"></div>
+</div>
+
+<script>
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
+   
+</body>
+</html> 

@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Post Job</title>
+<link rel="shortcut icon"
+	href="images/Hd_logo_Job_siccary-removebg-preview.png">
+<link rel="stylesheet" href="css/signup.css">
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<link rel="stylesheet" href="css/create_job.css">
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+	integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+	crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+	integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+	crossorigin="anonymous"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+	integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+	crossorigin="anonymous"></script>
+<script
+	src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+	integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+	crossorigin="anonymous"></script>
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+<link rel='stylesheet'
+	href='https://use.fontawesome.com/releases/v5.7.0/css/all.css'
+	integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ'
+	crossorigin='anonymous'>
+</head>
+<body ng-app="" style="background-color: powderblue">
+	<div id="main">
+		<span id="tops" style="font-size: 1px;">TOP</span>
+		<nav class="navbar navbar-light bg-light fixed-top"
+			style="border: black 2px solid; padding-left: 80px; padding-right: 20px; margin-left: 20px; margin-right: 10px; margin-top: 10px;">
+			<!-- Navbar content -->
+
+			<!-- <button type="button" class="btn btn-light" onclick="openNav();" > &#9776;</button> -->
+			<a
+				style="font-size: 25px; color: black; font-family: 'Times New Roman', Times, serif"><strong>JOB
+					SHIKARI - The best job portal of humanity</strong></a> <a href=""><button
+					type="button" class="btn btn-outline-dark">Home</button></a> <a
+				href="#"><button type="button" class="btn btn-secondary"
+					onclick="">Post Job</button></a> <a href=""><button type="button"
+					class="btn btn-outline-dark" onclick="">Tutorials</button></a> <a
+				href="contact_us.html"><button type="button"
+					class="btn btn-outline-dark" onclick="">Contact Us</button> </a>
+
+		</nav>
+
+	</div>
+	<br>
+	<br>
+	<br>
+	<center>
+		<strong><u><h1 style="font-size: 60px;">Post Job</h1></u></strong>
+	</center>
+	<div class="registrationform">
+		<form name="frm" action="CreateJobServlet" method="post">
+			<div class="row">
+				<div class="col-lg-6">
+					<div class="col-lg-3"></div>
+					<div class="col-lg-9" style="border: solid black;">
+						<div class="question e cow">
+							<label for="job">Job Title:</label>
+							<!-- for putting star -->
+							<span style="color: brown;" ng-show="frm.job.$error.required">*</span>
+							<input type="text" name="job" ng-model="job" required>
+						</div>
+						<hr width=100%>
+
+						<div class="question e">
+							<label for="loc">Location:</label> <span style="color: brown;"
+								ng-show="frm.loc.$error.required">*</span> <input type="text"
+								name="loc" ng-model="loc" required>
+
+						</div>
+
+
+						<hr width=100%>
+						<!-- <div class="row"> -->
+						<div class="question e">
+							<!-- <div class="col-lg-10"> -->
+							<label for="gen">Preferred
+								Gender:*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+							<span style="color: brown;" ng-show="frm.gen.$error.required">*</span>
+							<!-- </div> -->
+
+							<!-- <div class="col-lg-12" style="padding-left:250px;"> -->
+							<div class="form-check form-check-inline">
+								<input class="form-check-input" type="radio"
+									id="inlineCheckbox1" value="option1" name="gender"> <label
+									class="form-check-label" for="inlineCheckbox1">Male</label>
+							</div>
+							<div class="form-check form-check-inline">
+								<input class="form-check-input" type="radio"
+									id="inlineCheckbox2" value="option2" name="gender"> <label
+									class="form-check-label" for="inlineCheckbox2">Female</label>
+							</div>
+							<div class="row">
+								<div class="col-lg-5"></div>
+								<div class="col-lg-7">
+									<div class="form-check form-check-inline">
+										<input class="form-check-input" type="radio"
+											id="inlineCheckbox2" value="option3" name="gender"> <label
+											class="form-check-label" for="inlineCheckbox2">Not
+											Gender Specific</label>
+									</div>
+								</div>
+							</div>
+
+
+							<!-- </div> -->
+
+						</div>
+						<!-- </div> -->
+
+						<hr width=100%>
+						<div class="question e">
+							<label for="qual">Qualification:</label> <span
+								style="color: brown;" ng-show="frm.qual.$error.required">*</span>
+							<input type="text" name="qual" ng-model="qual" required>
+
+						</div>
+						<hr width=100%>
+						<div class="question e">
+							<label for="sal">Salary:</label> <span style="color: brown;"
+								ng-show="frm.sal.$error.required">*</span> <input type="text"
+								name="sal" ng-model="sal" required>
+
+						</div>
+						<hr width=100%>
+
+						<div class="question e">
+							<label for="exp">Experience Required:</label> <span
+								style="color: brown;" ng-show="frm.exp.$error.required">*</span>
+							<input type="text" name="exp" ng-model="exp" required>
+
+						</div>
+						<hr width=100%>
+						<div class="question ">
+							<label for="type">Job Type:</label> <span style="color: brown;"
+								ng-show="frm.type.$error.required">*</span>
+							<!-- <input type="text" name="type" ng-model="type" required> -->
+							<select name="type" class="type Type" name="type" ng-model="type"
+								required>
+								<!-- <option value="">--Select--</option> -->
+								<option value="1">Full Time</option>
+								<option value="2">Part Time</option>
+							</select>
+						</div>
+						<hr width=100%>
+						<div class="question e">
+							<label for="ind">Industry:</label> <span style="color: brown;"
+								ng-show="frm.ind.$error.required">*</span> <input type="text"
+								name="ind" ng-model="ind" required>
+
+						</div>
+						<hr width=100%>
+
+						<div class="question e ">
+							<label for="resp">Job Responsibility:</label> <span
+								style="color: brown;" ng-show="frm.resp.$error.required">*</span>
+							<textarea rows="5" cols="21" type="text" name="resp"
+								ng-model="resp" required></textarea>
+
+						</div>
+						<br>
+						<br>
+						<br>
+						<br>
+						<br>
+
+					</div>
+				</div>
+
+				<div class="col-lg-6" style="border: solid black">
+					<div class="col-lg-12">
+
+
+						<div class="question e cow">
+							<label for="skills">Primary Skills Required:</label> <span
+								style="color: brown;" ng-show="frm.skills.$error.required">*</span>
+							<textarea rows="7" cols="35" type="text" name="skills"
+								ng-model="skills" required></textarea>
+
+						</div>
+						<br>
+						<br>
+						<br>
+						<br>
+						<br>
+						<br>
+						<hr width=100%>
+						<div class="question e">
+							<label for="beni">Benifits(if any):</label>
+							<!-- <span style="color:brown;" ng-show="frm.beni.$error.required">*</span> -->
+							<textarea rows="7" cols="35" type="text" name="beni"
+								ng-model="beni" required></textarea>
+
+						</div>
+						<br>
+						<br>
+						<br>
+						<br>
+						<br>
+						<br>
+						<hr width=100%>
+						<div class="question e">
+							<label for="desc">Job Description:</label> <span
+								style="color: brown;" ng-show="frm.desc.$error.required">*</span>
+							<textarea rows="7" cols="35" type="text" name="desc"
+								ng-model="desc" required></textarea>
+
+
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+
+			<br>
+			<br>
+			<div class="butt">
+				<center>
+					<button onclick="submit()" type="submit"
+						class="btn btn-dark btn-lg ">Post</button>
+				</center>
+
+			</div>
+		</form>
+
+
+
+	</div>
+
+</body>
+<section id="footer">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<ul class="list-unstyled list-inline social text-center">
+					<li class="list-inline-item"><a href="..."><i
+							class='fab fa-facebook-square' style='font-size: 24px'></i></a></li>
+					<li class="list-inline-item"><a href="..."><i
+							class='fab fa-twitter' style='font-size: 24px'></i></a></li>
+					<li class="list-inline-item"><a href="..."><i
+							class='fab fa-github' style='font-size: 24px'></i></a></li>
+					<li class="list-inline-item"><a href="..."><i
+							class='fab fa-instagram' style='font-size: 24px'></i></a></li>
+					<li class="list-inline-item"><a href="about_us.html"><i
+							class="fa fa-info-circle" style="font-size: 24px"></i></a></li>
+				</ul>
+			</div>
+		</div>
+		<div>
+			<center>© 2019 Job Shikari - All Rights Reserved</center>
+			<br>
+		</div>
+
+	</div>
+</section>
+
+</html>

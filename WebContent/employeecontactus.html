@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Contact Us</title>
+<link rel="shortcut icon"
+	href="images/Hd_logo_Job_siccary-removebg-preview (1).png">
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+	integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+	crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+	integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+	crossorigin="anonymous">
+	
+</script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+	integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+	crossorigin="anonymous">
+	
+</script>
+<script
+	src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+	integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+	crossorigin="anonymous">
+	
+</script>
+<link rel="stylesheet" href="css/contactus.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<link rel='stylesheet'
+	href='https://use.fontawesome.com/releases/v5.7.0/css/all.css'
+	integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ'
+	crossorigin='anonymous'>
+</head>
+
+<body ng-app="">
+	<nav class="navbar navbar-light bg-light fixed-top" style="border: black 2px solid; padding-left: 80px;padding-right: 20px;margin-left: 20px;margin-right: 10px; margin-top: 10px;">
+        <!-- Navbar content -->
+        
+        <!-- <button type="button" class="btn btn-light" onclick="openNav();" > &#9776;</button> -->
+        <a style="font-size: 25px; color:black;  font-family:'Times New Roman', Times, serif"><strong>JOB SHIKARI - The best job portal of humanity</strong></a>
+       <a href="employeeHomepage.jsp"><button type="button" class="btn btn-outline-dark" > Home</button></a>
+       <form action="JobListServlet" method="GET">
+				 <a
+			><button type="submit"
+				class="btn btn-outline-dark">Jobs</button></a> 
+				</form>
+        <a href="Tutoreals.html"><button type="button" class="btn btn-outline-dark" onclick="">Tutorials</button></a>
+        <a href="#"><button type="button" class="btn btn-outline-dark" onclick="">Resume</button></a>
+        <a href="contactus.html"><button type="button" class="btn btn-secondary" onclick="">Contact Us</button>
+        </a>
+       
+      </nav>
+	<div class="image">
+		<div class="row">
+			<div class="col-lg-3"></div>
+			<div class="col-lg-6">
+				<div class="card">
+					<div class="card-body">
+						<h5 class="card-title">JobShikari</h5>
+						<form name="frm" action="">
+
+							<h3>Contact Us</h3>
+							<div class="question">
+								<label for="name">Name:</label> <span style="color: red;"
+									ng-show="frm.fname.$error.required">*</span> <input type="text"
+									name="fname" ng-model="fname" required>
+							</div>
+							<div class="question">
+								<label for="mail">Email:</label> <span style="color: red;"
+									ng-show="frm.mail.$error.required">*</span> <input type="email"
+									name="mail" ng-model="mail" required> <span
+									style="color: red;" ng-show="frm.mail.$error.email">Invalid
+									Email</span>
+							</div>
+							<div class="question">
+								<label for="phone">Phone Number:</label> <span
+									style="color: red;" ng-show="frm.phone.$error.required">*</span>
+								<input type="number" name="phone" ng-model="phone" id="phone"
+									required>
+							</div>
+							<div class="question">
+								<label for="Msg">Message:</label> <span style="color: red;"
+									ng-show="frm.msg.$error.required">*</span>
+								<textarea rows="4" cols="36" type="text" name="msg"
+									ng-model="msg" required></textarea>
+							</div>
+							<br>
+							<button type="submit" class="btn btn-outline-primary">Send</button>
+						</form>
+
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-3"></div>
+		</div>
+
+	</div>
+	<section id="footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<ul class="list-unstyled list-inline social text-center">
+						<li class="list-inline-item"><a href="..."><i
+								class='fab fa-facebook-square' style='font-size: 24px'></i></a></li>
+						<li class="list-inline-item"><a href="..."><i
+								class='fab fa-twitter' style='font-size: 24px'></i></a></li>
+						<li class="list-inline-item"><a href="..."><i
+								class='fab fa-github' style='font-size: 24px'></i></a></li>
+						<li class="list-inline-item"><a href="..."><i
+								class='fab fa-instagram' style='font-size: 24px'></i></a></li>
+						<li class="list-inline-item"><a href="about_us.html"><i
+								class="fa fa-info-circle" style="font-size: 24px"></i></a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="about">
+				<center>© 2019 Job Shikari - All Rights Reserved</center>
+				<br>
+			</div>
+
+		</div>
+	</section>
+
+</body>
+
+</html>

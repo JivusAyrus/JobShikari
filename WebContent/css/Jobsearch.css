@@ -1,0 +1,44 @@
+.image{
+  height:100%;
+  width:99%;
+}
+#footer {
+    background:#737373;
+  }
+  #footer ul.social li a{
+  color:#ffffff;
+  }
+  #footer ul.social li a:hover{
+    color:black;
+  }
+  #footer ul.social li{
+    padding-right: 15px;
+    padding-top:15px;
+  }
+  .about{
+    color:white;
+  }
+  .form-control-borderless {
+    border: none;
+}
+
+.form-control-borderless:hover, .form-control-borderless:active, .form-control-borderless:focus {
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+.cards{
+  border:1px solid black;
+  margin-top:80px;
+  margin-left:10px;
+  border-radius: 50px;
+}
+select{
+  width:90%;
+}
+.error{
+	height:80vh;
+	
+	margin:40px;
+	color:red;
+}

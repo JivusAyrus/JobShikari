@@ -1,0 +1,22 @@
+img{
+    border-radius:50%;
+    
+}
+.info{
+    padding-top:40px;
+    text-align: center;
+    float: left;
+}
+.s1 .info a{
+    padding-right: 10px;
+    
+}
+.s2 .info a{
+    padding-right: 10px;
+}
+.s1 .info a:hover{
+    color:black;
+}
+.s2 .info a:hover{
+    color:black;
+}
