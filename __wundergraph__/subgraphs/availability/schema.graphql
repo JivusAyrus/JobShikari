@@ -1,0 +1,27 @@
+schema @link(url: "https://specs.apollo.dev/federation/v2.5", import: ["@authenticated", "@composeDirective", "@external", "@extends", "@inaccessible", "@interfaceObject", "@override", "@provides", "@key", "@requires", "@requiresScopes", "@shareable", "@tag"]) {
+  mutation: Mutation
+}
+
+directive @key(fields: openfed__FieldSet!, resolvable: Boolean = true) repeatable on INTERFACE | OBJECT
+
+directive @link(as: String, for: link__Purpose, import: [link__Import], url: String!) repeatable on SCHEMA
+
+type Employee @key(fields: "id") {
+  id: Int!
+  isAvailable: Boolean
+}
+
+type Mutation {
+  """ This mutation updates the availability status of an employee in the system.
+  """
+  updateAvailability(employeeID: Int!, isAvailable: Boolean!): Employee!
+}
+
+scalar link__Import
+
+enum link__Purpose {
+  EXECUTION
+  SECURITY
+}
+
+scalar openfed__FieldSet

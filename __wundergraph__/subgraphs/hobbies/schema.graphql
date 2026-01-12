@@ -1,0 +1,106 @@
+schema @link(url: "https://specs.apollo.dev/federation/v2.5", import: ["@authenticated", "@composeDirective", "@external", "@extends", "@inaccessible", "@interfaceObject", "@override", "@provides", "@key", "@requires", "@requiresScopes", "@shareable", "@tag"]) {
+  subscription: Subscription
+}
+
+directive @goField(forceResolver: Boolean, name: String, omittable: Boolean) on FIELD_DEFINITION | INPUT_FIELD_DEFINITION
+
+directive @key(fields: openfed__FieldSet!, resolvable: Boolean = true) repeatable on INTERFACE | OBJECT
+
+directive @link(as: String, for: link__Purpose, import: [link__Import], url: String!) repeatable on SCHEMA
+
+type Country @key(fields: "key { name }", resolvable: false) {
+  key: CountryKey!
+}
+
+type CountryKey {
+  name: String!
+}
+
+type Employee @key(fields: "id") {
+  hobbies: [Hobby!]
+  id: Int!
+}
+
+type Exercise implements Hobby {
+  category: ExerciseType!
+  employees: [Employee!]! @goField(forceResolver: true)
+}
+
+enum ExerciseType {
+  CALISTHENICS
+  HIKING
+  SPORT
+  STRENGTH_TRAINING
+}
+
+interface Experience {
+  yearsOfExperience: Float!
+}
+
+type Flying implements Experience & Hobby {
+  employees: [Employee!]! @goField(forceResolver: true)
+  planeModels: [String!]!
+  yearsOfExperience: Float!
+}
+
+enum GameGenre {
+  ADVENTURE
+  BOARD
+  CARD
+  FPS
+  ROGUELITE
+  RPG
+  SIMULATION
+  STRATEGY
+}
+
+type Gaming implements Experience & Hobby {
+  employees: [Employee!]! @goField(forceResolver: true)
+  genres: [GameGenre!]!
+  name: String!
+  yearsOfExperience: Float!
+}
+
+interface Hobby {
+  employees: [Employee!]! @goField(forceResolver: true)
+}
+
+type Other implements Hobby {
+  employees: [Employee!]! @goField(forceResolver: true)
+  name: String!
+}
+
+type Programming implements Hobby {
+  employees: [Employee!]! @goField(forceResolver: true)
+  languages: [ProgrammingLanguage!]!
+}
+
+enum ProgrammingLanguage {
+  CSHARP
+  GO
+  RUST
+  TYPESCRIPT
+}
+
+type SDK @key(fields: "upc") {
+  clientLanguages: [ProgrammingLanguage!]!
+  upc: ID!
+}
+
+type Subscription {
+  countHob(intervalMilliseconds: Int!, max: Int!): Int!
+}
+
+type Travelling implements Hobby {
+  countriesLived: [Country!]!
+  employees: [Employee!]! @goField(forceResolver: true)
+}
+
+scalar link__Import
+
+enum link__Purpose {
+  EXECUTION
+  SECURITY
+}
+
+scalar openfed__FieldSet

@@ -1,0 +1,34 @@
+schema @link(url: "https://specs.apollo.dev/federation/v2.5", import: ["@authenticated", "@composeDirective", "@external", "@extends", "@inaccessible", "@interfaceObject", "@override", "@provides", "@key", "@requires", "@requiresScopes", "@shareable", "@tag"]) {
+  mutation: Mutation
+}
+
+directive @inaccessible on ARGUMENT_DEFINITION | ENUM | ENUM_VALUE | FIELD_DEFINITION | INPUT_FIELD_DEFINITION | INPUT_OBJECT | INTERFACE | OBJECT | SCALAR | UNION
+
+directive @key(fields: openfed__FieldSet!, resolvable: Boolean = true) repeatable on INTERFACE | OBJECT
+
+directive @link(as: String, for: link__Purpose, import: [link__Import], url: String!) repeatable on SCHEMA
+
+type Employee @key(fields: "id") {
+  currentMood: Mood!
+  id: Int!
+}
+
+enum Mood {
+  APATHETIC @inaccessible
+  HAPPY
+  SAD
+}
+
+type Mutation {
+  """ This mutation update the mood of an employee. """
+  updateMood(employeeID: Int!, mood: Mood!): Employee!
+}
+
+scalar link__Import
+
+enum link__Purpose {
+  EXECUTION
+  SECURITY
+}
+
+scalar openfed__FieldSet

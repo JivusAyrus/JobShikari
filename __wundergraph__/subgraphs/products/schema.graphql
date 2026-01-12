@@ -1,0 +1,112 @@
+schema @link(url: "https://specs.apollo.dev/federation/v2.5", import: ["@authenticated", "@composeDirective", "@external", "@extends", "@inaccessible", "@interfaceObject", "@override", "@provides", "@key", "@requires", "@requiresScopes", "@shareable", "@tag"]) {
+  mutation: Mutation
+}
+
+directive @authenticated on ENUM | FIELD_DEFINITION | INTERFACE | OBJECT | SCALAR
+
+directive @key(fields: openfed__FieldSet!, resolvable: Boolean = true) repeatable on INTERFACE | OBJECT
+
+directive @link(as: String, for: link__Purpose, import: [link__Import], url: String!) repeatable on SCHEMA
+
+directive @override(from: String!) on FIELD_DEFINITION
+
+directive @requiresScopes(scopes: [[openfed__Scope!]!]!) on ENUM | FIELD_DEFINITION | INTERFACE | OBJECT | SCALAR
+
+directive @shareable repeatable on FIELD_DEFINITION | OBJECT
+
+type Consultancy @key(fields: "upc") {
+  name: ProductName!
+  upc: ID!
+}
+
+type Cosmo @key(fields: "upc") {
+  name: ProductName!
+  repositoryURL: String!
+  upc: ID!
+}
+
+type DirectiveFact implements TopSecretFact @authenticated {
+  description: FactContent!
+  factType: TopSecretFactType
+  title: String!
+}
+
+type Documentation {
+  url(product: ProductName!): String!
+  urls(products: [ProductName!]!): [String!]!
+}
+
+type Employee @key(fields: "id") {
+  id: Int!
+  notes: String @override(from: "employees")
+  products: [ProductName!]!
+}
+
+type EntityFact implements TopSecretFact @requiresScopes(scopes: [["read:entity"]]) {
+  description: FactContent!
+  factType: TopSecretFactType
+  title: String!
+}
+
+scalar FactContent @requiresScopes(scopes: [["read:scalar"], ["read:all"]])
+
+type MiscellaneousFact implements TopSecretFact {
+  description: FactContent! @requiresScopes(scopes: [["read:miscellaneous"]])
+  factType: TopSecretFactType
+  title: String!
+}
+
+type Mutation {
+  addFact(fact: TopSecretFactInput!): TopSecretFact! @requiresScopes(scopes: [["write:fact"], ["write:all"]])
+}
+
+enum ProductName {
+  CONSULTANCY
+  COSMO
+  ENGINE
+  FINANCE
+  HUMAN_RESOURCES
+  MARKETING
+  SDK
+}
+
+union Products = Consultancy | Cosmo | Documentation
+
+type Query {
+  factTypes: [TopSecretFactType!]
+  productTypes: [Products!]!
+  sharedThings(numOfA: Int!, numOfB: Int!): [Thing!]! @shareable
+  topSecretFederationFacts: [TopSecretFact!]! @requiresScopes(scopes: [["read:fact"], ["read:all"]])
+}
+
+type Thing @shareable {
+  a: String!
+}
+
+interface TopSecretFact @authenticated {
+  description: FactContent!
+  factType: TopSecretFactType
+}
+
+input TopSecretFactInput {
+  description: FactContent!
+  factType: TopSecretFactType!
+  title: String!
+}
+
+enum TopSecretFactType @authenticated {
+  DIRECTIVE
+  ENTITY
+  MISCELLANEOUS
+}
+
+scalar link__Import
+
+enum link__Purpose {
+  EXECUTION
+  SECURITY
+}
+
+scalar openfed__FieldSet
+
+scalar openfed__Scope
