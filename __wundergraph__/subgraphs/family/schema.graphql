@@ -40,6 +40,7 @@ enum Class {
 
 type Details {
   forename: String! @shareable
+  hasChildren: Boolean!
   maritalStatus: MaritalStatus
   middlename: String @deprecated(reason: "No longer supported")
   nationality: Nationality!
