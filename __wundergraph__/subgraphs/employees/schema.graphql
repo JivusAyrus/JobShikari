@@ -78,7 +78,6 @@ type Employee implements Identifiable @key(fields: "id") {
   rootFieldErrorWrapper: ErrorWrapper @goField(forceResolver: true)
   rootFieldThrowsError: String @goField(forceResolver: true)
   salary: Float
-  something: Boolean @shareable
   startDate: String! @requiresScopes(scopes: [["read:employee", "read:private"], ["read:all"]])
   tag: String!
   updatedAt: String!
