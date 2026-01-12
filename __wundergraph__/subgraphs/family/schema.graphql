@@ -45,7 +45,6 @@ type Details {
   middlename: String @deprecated(reason: "No longer supported")
   nationality: Nationality!
   pets: [Pet]
-  surname: String!
 }
 
 type Dog implements Animal & Pet {
